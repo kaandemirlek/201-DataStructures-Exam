@@ -1,7 +1,14 @@
 public class FirstWeek {
 
     public static boolean isPrime(int N){
-        return false;
+        if (N<2)
+            return false;
+        for (int i = 2; i<=Math.sqrt(N) ;i++){
+            if (N%i==0){
+                return false;
+            }
+        }
+        return true;
     }
 
     public static boolean isInArray(int K, int[] array){
